@@ -1,0 +1,4 @@
+git add archivo.js / agregar un archivo
+git status //vera que subiras
+git commit -m "texto que describa el cambio" 
+git push // sube los cambios a github.

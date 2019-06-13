@@ -1,0 +1,38 @@
+{
+  "presets": [
+    "env"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chromedriver": "^2.37.0"
+  },
+  "dependencies": {
+    "JSON2": "^0.1.0",
+    "async": "^2.6.2",
+    "ba64": "^3.0.9",
+    "base64-to-image": "^1.0.2",
+    "bluebird": "^3.5.3",
+    "csv-array": "0.0.22",
+    "d3": "^4.11.0",
+    "dateformat": "^3.0.2",
+    "excel": "^0.1.7",
+    "extract-zip": "^1.6.5",
+    "googleapis": "^27.0.0",
+    "hashmap": "^2.3.0",
+    "image-data-uri": "^1.0.1",
+    "image-downloader": "^3.3.0",
+    "json": "^9.0.6",
+    "mysql": "^2.17.1",
+    "node-7z": "^0.4.0",
+    "node-fetch": "^1.7.3",
+    "node-require-tsv": "^1.0.1",
+    "node-wget": "^0.4.2",
+    "node-while-loop": "^1.0.4",
+    "node-xlsx": "^0.11.2",
+    "nodemailer": "^4.4.1",
+    "promise": "^8.0.1",
+    "puppeteer": "^1.3.0",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
