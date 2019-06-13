@@ -1,4 +1,4 @@
-//version 2
+//version 3
 //var async = require('async');
 //var Promise = require("bluebird");
 require('chromedriver');
