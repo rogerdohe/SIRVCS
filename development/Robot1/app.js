@@ -1,3 +1,4 @@
+//version 2
 //var async = require('async');
 //var Promise = require("bluebird");
 require('chromedriver');
@@ -39,7 +40,7 @@ function news(){
 		driver.findElement(By.xpath('//*[@id="universal-menu-primero"]/div[1]')).click();
 		driver.sleep(10000);
 		driver.findElement(By.xpath('//*[@id="universal-header-bottom"]/div[7]/ul/li[3]/a')).click();
-		
+
 		driver.wait(until.elementLocated(By.className('nombre-seccion'),15000)).then( function(){
 			driver.sleep(10000);
 			console.log('seccion metropoli|||');
@@ -77,9 +78,9 @@ function news(){
 					if(links[i][0].indexOf('/metropoli/') != -1){
           				auxLinks.push(links[i][0]);
 					}
-		
+
 				}
-	
+
 				urls=auxLinks.unique();
 				//console.log('urls:'+urls.length);
 				//console.log(urls);
@@ -127,7 +128,7 @@ function downloadDataNews(urls){
 		for(var i =0 ; i < newsProperties.length-1; i++){
 			if(newsProperties[i].length == 7){ links.push(newsProperties[i][2]); }
 		}
-		
+
 		for(var i=0; i< links.length; i++){
 			if(links[i][0].indexOf('/metropoli/') != -1){ newLinks.push(links[i][0]); }
 		}
@@ -136,7 +137,7 @@ function downloadDataNews(urls){
 
   	});
   });
-  
+
 }
 
 
@@ -154,12 +155,12 @@ function visitLinksToNews(links){
             html = html.replace('>','').replace(/\n/g,'').replace('</a>','').replace(';','').replace('</div>','').replace('<p>','').replace('</p>','').replace('&nbsp','').replace('<strong>','').replace('<br>','').replace('</strong>','').replace('</div>','').replace('.<p>','').trim();
 		    html = html.split('<div');
 		    //console.log(html);
-            
+
 		    for (var i = 0; i < html.length-1; i++) {
-		   		
-		   		if(html[i].indexOf('class=\"hora\"') != -1 || html[i].indexOf('class=\"fechap\"') != -1 || html[i].indexOf('class=\"pane-content\"><h1>') != -1 
+
+		   		if(html[i].indexOf('class=\"hora\"') != -1 || html[i].indexOf('class=\"fechap\"') != -1 || html[i].indexOf('class=\"pane-content\"><h1>') != -1
 		   			|| html[i].indexOf('class=\"field field-name-body field-type-text-with-summary field-label-hidden\"') != -1 ){
-		   		   
+
 		   		    html[i] = html[i].replace('</strong>','').replace('class="hora">','').replace('class="field field-name-body field-type-text-with-summary field-label-hidden">','').replace('class="fechap">','').replace('class="pane-content"><h1>','').replace('<p>','').replace('</p>','').replace('</strong>','').replace('<strong>','').replace('.</p>','').replace('<p>','').replace('.<p>','. ').replace(';','').replace('</p><p>','').replace('</strong></p><p>','').trim();
 		   		    clearData = html[i];
 		   		    dataNewOk.push(clearData);
