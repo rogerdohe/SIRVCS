@@ -22,7 +22,7 @@
     "hashmap": "^2.3.0",
     "image-data-uri": "^1.0.1",
     "image-downloader": "^3.3.0",
-    "json": "^9.0.6",
+    "json": "^10.0.0",
     "mysql": "^2.17.1",
     "node-7z": "^0.4.0",
     "node-fetch": "^1.7.3",
