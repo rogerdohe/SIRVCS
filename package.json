@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "JSON2": "^0.1.0",
-    "async": "^2.6.2",
+    "async": "^2.6.4",
     "ba64": "^3.0.9",
     "base64-to-image": "^1.0.2",
     "bluebird": "^3.5.3",
